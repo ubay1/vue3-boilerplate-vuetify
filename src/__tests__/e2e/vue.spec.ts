@@ -9,7 +9,7 @@ test('check title page', async ({ page }) => {
 
 test('check error message', async ({ page }) => {
   await page.goto('/')
-  await page.getByTestId('home-example-form-input').fill('')
+  await page.getByTestId('home-example-form-input').locator('input').fill('')
   await page.getByTestId('home-example-btn-submit').click()
   await expect(page.getByTestId('home-example-error-msg')).toContainText('Username wajib diisi')
 })

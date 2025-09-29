@@ -50,12 +50,19 @@ const onSubmit = handleSubmit((values: FormValues) => {
                   <v-col cols="12">
                     <v-text-field
                       v-model="username"
+                      data-testid="home-example-form-input"
                       variant="outlined"
                       label="Username"
                       color="primary"
                       clearable
                       :error-messages="usernameError"
-                    />
+                    >
+                      <template #message>
+                        <span v-if="usernameError" data-testid="home-example-error-msg">
+                          {{ usernameError }}
+                        </span>
+                      </template>
+                    </v-text-field>
                   </v-col>
 
                   <v-col cols="12">
@@ -73,7 +80,13 @@ const onSubmit = handleSubmit((values: FormValues) => {
 
                 <v-row dense class="mt-4" :class="{ 'flex-column': !mdAndUp }">
                   <v-col cols="12" md="6">
-                    <v-btn block color="primary" type="submit" prepend-icon="mdi-send">
+                    <v-btn
+                      block
+                      data-testid="home-example-btn-submit"
+                      color="primary"
+                      type="submit"
+                      prepend-icon="mdi-send"
+                    >
                       Submit
                     </v-btn>
                   </v-col>
