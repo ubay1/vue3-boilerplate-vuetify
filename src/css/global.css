@@ -1,0 +1,34 @@
+.v-text-field .v-input__details {
+  padding-inline: 0px !important;
+}
+
+/* global.css */
+.v-field--variant-filled.v-field,
+.v-field--variant-outlined.v-field {
+  min-height: 36px !important; /* default ~56px */
+}
+.v-field--variant-filled .v-input__control,
+.v-field--variant-outlined .v-input__control {
+  min-height: 36px !important; /* default ~56px */
+  font-size: 14px !important; /* default 16px */
+}
+
+.v-btn {
+  height: 32px !important;
+  font-size: 0.75rem !important;
+  padding: 0 12px !important;
+}
+
+.v-field-label {
+  font-size: 0.9rem !important;
+}
+.v-field-label.v-field-label--floating {
+  font-size: 0.7rem !important;
+}
+
+/* target scrim (backdrop) */
+.v-navigation-drawer__scrim {
+  backdrop-filter: blur(4px) !important;
+  background-color: rgb(17 17 17 / 15%) !important;
+  opacity: 1 !important;
+}
